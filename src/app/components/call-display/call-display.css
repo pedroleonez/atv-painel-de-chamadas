@@ -36,7 +36,7 @@
 }
 
 .password {
-  font-size: var(--font-size-display);
+  font-size: var(--font-size-7xl);
   font-weight: var(--font-weight-black);
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
@@ -54,7 +54,7 @@
 }
 
 .doctor {
-  font-size: var(--font-size-guichet);
+  font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-primary);
   color: var(--text-white);
@@ -69,7 +69,7 @@
 }
 
 .guichet-label {
-  font-size: 1.5rem;
+  font-size: var(--font-size-4xl);
   font-weight: 600;
   color: #334155;
   display: flex;
