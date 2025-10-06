@@ -77,8 +77,7 @@
   --font-size-4xl: 1.5rem;         /* 24px - Títulos grandes */
   --font-size-5xl: 2.5rem;         /* 40px - Display pequeno */
   --font-size-6xl: 4rem;           /* 64px - Display grande */
-  --font-size-display: clamp(2.5rem, 8vw, 4rem); /* Responsivo para senhas */
-  --font-size-guichet: clamp(1.2rem, 4vw, 1.8rem); /* Responsivo para guichês */
+  --font-size-7xl: 5rem;           /* 80px - Display extra grande */
 
   /* === PESOS DA FONTE === */
   --font-weight-thin: 100;         /* Muito leve */
