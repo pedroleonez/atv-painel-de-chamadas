@@ -1,0 +1,11 @@
+<div class="video-wrapper">
+  <youtube-player
+    [videoId]="getVideoId()"
+    [width]="undefined"
+    [height]="undefined"
+    [playerVars]="playerConfig"
+    (ready)="onPlayerReady($event)"
+    (stateChange)="onStateChange($event)"
+    [class]="isMainPlayer ? 'main-youtube-player' : 'mini-youtube-player'">
+  </youtube-player>
+</div>
