@@ -1,0 +1,39 @@
+/* ===== ESTILOS GLOBAIS E RESET ===== */
+
+* {
+  box-sizing: border-box;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease,
+    background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-bg);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== ESTILOS GLOBAIS PARA VÍDEOS DO YOUTUBE ===== */
+/* CSS global para garantir que todos os iframes do YouTube sejam responsivos */
+youtube-player,
+youtube-player iframe {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Garantir que vídeos não sejam cortados em telas pequenas */
+iframe[src*="youtube.com"],
+iframe[src*="youtu.be"] {
+  max-width: 100% !important;
+  height: auto !important;
+}

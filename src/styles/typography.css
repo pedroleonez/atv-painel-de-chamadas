@@ -1,0 +1,9 @@
+/* ===== TIPOGRAFIA GLOBAL ===== */
+
+html,
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}

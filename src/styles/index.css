@@ -1,0 +1,9 @@
+/* ===== ARQUIVO PRINCIPAL DE ESTILOS GLOBAIS ===== */
+
+/* Importações externas */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Importações locais */
+@import './variables.css';
+@import './globals.css';
+@import './typography.css';

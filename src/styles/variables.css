@@ -1,0 +1,107 @@
+/* ===== VARIÁVEIS CSS - CORES E TIPOGRAFIA DO PROJETO ===== */
+
+:root {
+  /* === CORES PRIMÁRIAS === */
+  --primary-dark-green: #0a5750;        /* Header background */
+  --primary-green: #10b981;             /* Accent green, current call background */
+  --primary-teal: #14b8a6;              /* Alternative green for call display */
+  --primary-cyan: #2dd4bf;              /* Guichet background */
+
+  /* === CORES NEUTRAS === */
+  --white: #ffffff;                     /* Texto branco, backgrounds */
+  --black: #000000;                     /* Video player background */
+  --pure-white: #fff;                   /* Variant para backgrounds */
+
+  /* === CORES DE FUNDO === */
+  --bg-light-gray: #eff1f4;             /* Body background */
+  --bg-gray-light: #f3f4f6;             /* Audio control hover */
+  --bg-slate-light: #f9fafb;            /* History item background */
+  --bg-gray-medium: #e5e7eb;            /* Highlight section background */
+  --bg-slate-dark: #334155;             /* Call display background */
+
+  /* === CORES DE TEXTO === */
+  --text-white: #ffffff;                /* Texto branco */
+  --text-light-green: #e0f2f1;          /* Data no header */
+  --text-gray-dark: #374151;            /* Section title */
+  --text-slate-dark: #334155;           /* Guichet label */
+
+  /* === CORES DE ESTADO === */
+  --success-green: #10b981;             /* Estado habilitado do áudio */
+
+  --accent-teal: #14b8a6;               /* Current call background */
+
+  /* === CORES DE BORDA === */
+  --border-gray: #9ca3af;               /* History item border */
+
+  /* === SOMBRAS E TRANSPARÊNCIAS === */
+  --shadow-black-10: rgba(0, 0, 0, 0.1);     /* Box shadows padrão */
+  --shadow-black-20: rgba(0, 0, 0, 0.2);     /* Box shadows mais escuras */
+  --shadow-black-30: rgba(0, 0, 0, 0.3);     /* Text shadows */
+
+
+  /* === CORES NOMEADAS === */
+  --company-header-bg: var(--primary-dark-green);
+  --current-call-bg: var(--accent-teal);
+  --calling-state-bg: var(--primary-green);
+  --guichet-bg: var(--primary-cyan);
+  --video-player-bg: var(--black);
+  --sidebar-bg: var(--white);
+  --body-bg: var(--bg-light-gray);
+  --call-display-bg: var(--bg-slate-dark);
+  --highlight-bg: var(--bg-gray-medium);
+  --history-item-bg: var(--bg-slate-light);
+  --audio-hover-bg: var(--bg-gray-light);
+
+  /* === CORES ESPECÍFICAS DO HISTÓRICO === */
+  --history-text-muted: #767a83;
+  --history-text-active: #000000;
+  --history-doctor-text: #6b7280;
+  --history-guichet-text: #374151;
+  --history-default-gray: #9ca3af;
+
+  /* ===== VARIÁVEIS DE TIPOGRAFIA ===== */
+
+  /* === FAMÍLIA DA FONTE === */
+  --font-family-primary: 'Roboto', sans-serif;
+  --font-family-fallback: sans-serif;
+
+  /* === TAMANHOS DE FONTE === */
+  --font-size-xs: 0.6rem;          /* 9.6px - Textos muito pequenos */
+  --font-size-sm: 0.7rem;          /* 11.2px - Textos pequenos */
+  --font-size-base: 0.8rem;        /* 12.8px - Texto base pequeno */
+  --font-size-md: 0.85rem;         /* 13.6px - Texto médio */
+  --font-size-lg: 0.9rem;          /* 14.4px - Texto grande */
+  --font-size-xl: 1rem;            /* 16px - Texto padrão */
+  --font-size-2xl: 1.1rem;         /* 17.6px - Títulos pequenos */
+  --font-size-3xl: 1.2rem;         /* 19.2px - Títulos médios */
+  --font-size-4xl: 1.5rem;         /* 24px - Títulos grandes */
+  --font-size-5xl: 2.5rem;         /* 40px - Display pequeno */
+  --font-size-6xl: 4rem;           /* 64px - Display grande */
+  --font-size-display: clamp(2.5rem, 8vw, 4rem); /* Responsivo para senhas */
+  --font-size-guichet: clamp(1.2rem, 4vw, 1.8rem); /* Responsivo para guichês */
+
+  /* === PESOS DA FONTE === */
+  --font-weight-thin: 100;         /* Muito leve */
+  --font-weight-light: 300;        /* Leve */
+  --font-weight-regular: 400;      /* Normal */
+  --font-weight-medium: 500;       /* Médio */
+  --font-weight-semibold: 600;     /* Semi-negrito */
+  --font-weight-bold: 700;         /* Negrito */
+  --font-weight-extrabold: 800;    /* Extra negrito */
+  --font-weight-black: 900;        /* Muito negrito */
+
+  /* === ESPAÇAMENTO DE LETRAS === */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  --letter-spacing-password: 1px;   /* Para senhas */
+  --letter-spacing-title: 0.5px;    /* Para títulos */
+
+  /* === ALTURA DE LINHA === */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+}
