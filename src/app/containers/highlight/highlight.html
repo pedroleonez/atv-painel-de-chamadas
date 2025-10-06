@@ -1,0 +1,18 @@
+<div class="highlight-section" [ngClass]="{'calling-state': isCallingState}">
+
+  <div class="call-display-overlay" [ngClass]="{'active': isCallingState && currentCall}">
+    <app-call-display [currentCall]="currentCall"></app-call-display>
+  </div>
+
+  <div class="highlight-subsection">
+    <!-- Vídeo principal quando não está em chamada -->
+    @if (showVideo) {
+      <div class="video-container video-entering">
+        <app-video-player
+          [isMainPlayer]="true">
+        </app-video-player>
+      </div>
+    }
+  </div>
+
+</div>
