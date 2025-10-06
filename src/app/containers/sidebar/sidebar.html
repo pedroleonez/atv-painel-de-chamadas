@@ -1,0 +1,95 @@
+<div class="sidebar-section">
+  <!-- Botão de Áudio -->
+  <div class="audio-control">
+    <button
+      class="audio-icon-button"
+      (click)="toggleAudio()"
+      [title]="audioEnabled ? 'Clique para desativar o áudio' : 'Clique para ativar o áudio'"
+    >
+      <span class="audio-icon" [class.enabled]="audioEnabled">
+        @if (audioEnabled) {
+        <span>🔊</span>
+        } @if (!audioEnabled) {
+        <span>🔈</span>
+        }
+      </span>
+    </button>
+  </div>
+
+  <!-- Estado Padrão -->
+  @if (!isCallingState) {
+  <div class="default-state">
+    <!-- Chamada Atual -->
+    @if (lastCall) {
+    <div class="current-call-section">
+      <h3 class="section-title">SENHA ATUAL</h3>
+      <div class="current-call">
+        <div class="current-call-left-info">
+          <div class="current-password">{{ lastCall.password }}</div>
+          <span class="last-history-doctor">{{ getFormattedDoctorInfo(lastCall) }}</span>
+        </div>
+        <div class="current-call-right-info">
+          <span class="last-history-guichet">GUICHÊ {{ lastCall.guichet }}</span>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- Histórico de Chamadas -->
+    <div class="history-section">
+      <h3 class="section-title">HISTÓRICO DE CHAMADAS</h3>
+      <div class="history-list">
+        @for (call of callHistory; track call.password) {
+        <div class="history-item-call default-history">
+          <div class="history-main">
+            <span class="history-password-call">{{ call.password }}</span>
+            <span class="history-time-call">{{ formatTime(call.timestamp) }}</span>
+          </div>
+          <div class="history-details">
+            <div class="history-bottom-row">
+              <span class="history-doctor">{{ getFormattedDoctorInfo(call) }}</span>
+              <span class="history-guichet">GUICHÊ {{ call.guichet }}</span>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Estado de Chamada -->
+  @if (isCallingState) {
+  <div class="calling-state">
+    <!-- Histórico Geral -->
+    <div class="general-history-section">
+      <h3 class="section-title">HISTÓRICO GERAL</h3>
+      <div class="history-list">
+        @for (call of allHistory; track call.password) {
+        <div class="history-item">
+          <div class="history-main">
+            <span class="history-password">{{ call.password }}</span>
+            <span class="history-time">{{ formatTime(call.timestamp) }}</span>
+          </div>
+          <div class="history-details">
+            <div class="history-bottom-row">
+              <span class="history-doctor">{{ getFormattedDoctorInfo(call) }}</span>
+              <span class="history-guichet">GUICHÊ {{ call.guichet }}</span>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+
+  <div class="sidebar-video">
+    <!-- Mini vídeo quando está em chamada -->
+    @if (showMiniVideo) {
+    <div class="mini-video-container mini-video-entering">
+      <app-video-player [isMainPlayer]="false"> </app-video-player>
+    </div>
+    }
+  </div>
+</div>

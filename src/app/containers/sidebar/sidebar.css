@@ -1,0 +1,391 @@
+.sidebar-section {
+  height: calc(100vh - 45px - 40px);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Mudado de visible para hidden */
+  position: relative;
+  min-height: 0; /* Adiciona controle de flex shrink */
+}
+
+/* Controle de Áudio */
+.audio-control {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 10;
+}
+
+.audio-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-icon-button:hover {
+  background-color: #f3f4f6;
+}
+
+.audio-icon {
+  font-size: var(--font-size-md);
+  font-family: var(--font-family-primary);
+  position: relative;
+  display: inline-block;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.audio-icon.enabled {
+  filter: grayscale(0%);
+  opacity: 1;
+  color: #10b981;
+}
+
+
+
+/* Estado Padrão */
+.default-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0; /* Permite que o flex shrink funcione */
+}
+
+.section-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+  color: var(--text-gray-dark);
+  margin: 0 0 15px 0;
+  letter-spacing: var(--letter-spacing-title);
+}
+
+/* Chamada Atual */
+.current-call-section {
+  flex-shrink: 0;
+}
+
+.current-call {
+  background-color: #14b8a6;
+  border-radius: 0.5rem;
+  padding: 12px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-call-left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.last-history-doctor {
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-primary);
+  color: var(--text-white);
+}
+
+.current-call-right-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-history-guichet {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-extrabold);
+  font-family: var(--font-family-primary);
+  color: var(--text-white);
+}
+
+.current-password {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-family-primary);
+  color: var(--text-white);
+  letter-spacing: var(--letter-spacing-password);
+}
+
+
+
+.history-item-call {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  border-left: 3px solid #9ca3af;
+  transition: all 0.2s ease;
+}
+
+/* Histórico */
+.history-section {
+  flex: 1;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Permite que o flex shrink funcione */
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  border-left: 3px solid #10b981;
+  transition: all 0.2s ease;
+}
+
+.history-list {
+  flex: 1;
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item:hover {
+  background-color: #f3f4f6;
+  border-left-color: #9ca3af;
+}
+
+/* Layout comum para elementos do histórico */
+.history-main,
+.history-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos base dos textos do histórico */
+.history-password-call,
+.history-time-call {
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  color: var(--history-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.history-password,
+.history-time {
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-primary);
+  color: var(--history-text-active);
+  font-size: var(--font-size-sm);
+}
+
+.history-time {
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-primary);
+}
+
+.history-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+/* Textos menores do histórico */
+.history-doctor,
+.history-guichet {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
+}
+
+.history-doctor {
+  color: var(--history-doctor-text);
+  text-transform: uppercase;
+}
+
+.history-guichet {
+  font-weight: var(--font-weight-semibold);
+  color: var(--history-guichet-text);
+}
+
+/* Histórico no Estado Padrão - Cor Cinza */
+.default-history .history-password {
+  color: var(--history-default-gray);
+}
+
+.default-history .history-time {
+  color: var(--history-default-gray);
+}
+
+.default-history .history-doctor {
+  color: var(--history-default-gray);
+}
+
+.default-history .history-guichet {
+  color: var(--history-default-gray);
+}
+
+/* Estado de Chamada */
+.calling-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0; /* Permite que o flex shrink funcione */
+}
+
+.general-history-section {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Permite que o flex shrink funcione */
+}
+
+/* No estado de chamada, o histórico deve ter scroll devido ao mini vídeo abaixo */
+.calling-state .general-history-section .history-list {
+  overflow-y: auto;
+}
+
+
+
+/* Vídeo no Sidebar */
+.sidebar-video {
+  margin-top: auto;
+  margin-bottom: 10px;
+  padding: 15px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-shrink: 0;
+  min-height: 140px; /* Garante altura mínima para o vídeo */
+}
+
+.mini-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 16 / 9;
+  /* Animação específica para o mini vídeo */
+  animation: miniVideoSlideIn 0.7s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* Animação do mini vídeo - entra deslizando de baixo */
+@keyframes miniVideoSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Classe específica para quando o mini vídeo está entrando */
+.mini-video-entering {
+  animation: miniVideoSlideIn 0.7s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sidebar-section {
+    padding: 12px;
+    height: auto; /* Altura automática */
+    min-height: auto;
+    max-height: none; /* Remove qualquer limitação de altura */
+    overflow: visible; /* Permite que o conteúdo se expanda */
+  }
+
+  .section-title {
+    font-size: var(--font-size-sm);
+    margin-bottom: 10px;
+  }
+
+  .current-call {
+    padding: 10px 12px;
+  }
+
+  .current-password {
+    font-size: var(--font-size-3xl);
+    margin-bottom: 8px;
+  }
+
+
+
+  .history-password {
+    font-size: var(--font-size-sm);
+  }
+
+  .history-time {
+    font-size: var(--font-size-xs);
+  }
+
+  .history-doctor {
+    font-size: var(--font-size-xs);
+  }
+
+  .history-guichet {
+    font-size: var(--font-size-xs);
+  }
+
+
+
+  .sidebar-video {
+    margin-bottom: 8px;
+    padding: 8px 0 8px 0;
+    min-height: auto; /* Remove altura mínima forçada no mobile */
+  }
+
+  .mini-video-container {
+    border-radius: 6px;
+    max-width: 240px; /* Limita o tamanho no mobile */
+  }
+
+  /* Ajustar estados para altura livre no mobile */
+  .default-state {
+    height: auto; /* Altura livre no mobile */
+    min-height: 0;
+  }
+
+  /* Permitir que o histórico se expanda livremente no mobile */
+  .history-section,
+  .general-history-section {
+    max-height: none; /* Remove limitação de altura */
+    overflow: visible; /* Remove scroll forçado */
+  }
+
+  .calling-state {
+    height: auto; /* Altura livre no mobile */
+    min-height: 0;
+  }
+
+  /* Lista do histórico com scroll somente quando necessário no mobile */
+  .history-list {
+    overflow-y: visible; /* Remove scroll forçado */
+    max-height: none; /* Remove limitação */
+  }
+}
