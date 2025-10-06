@@ -29,11 +29,5 @@ export class App implements OnInit {
     // Configuração inicial da aplicação
     // Inicia o sistema de chamadas automáticas para demonstração
     this.callService.startAutoCall();
-
-    // Gera uma primeira chamada após 5 segundos para demonstração
-    // Isso permite que a interface carregue completamente antes da primeira chamada
-    setTimeout(() => {
-      this.callService.generateNewCall();
-    }, 5000);
   }
 }
