@@ -1,4 +1,3 @@
-/* Estilos base para o componente video-player */
 :host {
   display: block;
   width: 100%;
@@ -27,9 +26,6 @@
   }
 }
 
-
-
-/* Container responsivo com aspect ratio */
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -37,16 +33,11 @@
   overflow: hidden;
   border-radius: 8px;
   background-color: #000;
-  /* Garantir que o container mantenha proporções */
   min-width: 200px;
   min-height: 112px;
-  /* Transição suave para mudanças de tamanho */
   transition: all 0.3s ease-out;
-  /* Sombra sutil que cresce com a animação */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
-
 
 /* Player principal (highlight) */
 .main-youtube-player {
@@ -69,7 +60,6 @@
   height: 100%;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #000;
   transition: transform 0.3s ease-out;
 }
 

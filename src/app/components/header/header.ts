@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
  * Design:
  * - Layout fixo no topo da aplicação
  * - Responsivo para diferentes telas
- * - Contraste adequado para boa legibilidade
  */
 @Component({
   selector: 'app-header',

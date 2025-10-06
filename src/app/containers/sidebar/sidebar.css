@@ -51,8 +51,6 @@
   color: #10b981;
 }
 
-
-
 /* Estado Padrão */
 .default-state {
   height: 100%;
@@ -119,8 +117,6 @@
   color: var(--text-white);
   letter-spacing: var(--letter-spacing-password);
 }
-
-
 
 .history-item-call {
   display: flex;
@@ -260,8 +256,6 @@
   overflow-y: auto;
 }
 
-
-
 /* Vídeo no Sidebar */
 .sidebar-video {
   margin-top: auto;
@@ -271,7 +265,7 @@
   justify-content: center;
   align-items: flex-end;
   flex-shrink: 0;
-  min-height: 140px; /* Garante altura mínima para o vídeo */
+  min-height: 140px;
 }
 
 .mini-video-container {
@@ -314,10 +308,10 @@
 @media (max-width: 768px) {
   .sidebar-section {
     padding: 12px;
-    height: auto; /* Altura automática */
+    height: auto;
     min-height: auto;
-    max-height: none; /* Remove qualquer limitação de altura */
-    overflow: visible; /* Permite que o conteúdo se expanda */
+    max-height: none;
+    overflow: visible;
   }
 
   .section-title {
@@ -333,8 +327,6 @@
     font-size: var(--font-size-3xl);
     margin-bottom: 8px;
   }
-
-
 
   .history-password {
     font-size: var(--font-size-sm);
@@ -352,8 +344,6 @@
     font-size: var(--font-size-xs);
   }
 
-
-
   .sidebar-video {
     margin-bottom: 8px;
     padding: 8px 0 8px 0;
@@ -365,13 +355,13 @@
     max-width: 240px; /* Limita o tamanho no mobile */
   }
 
-  /* Ajustar estados para altura livre no mobile */
+  /* Ajusta estados para altura livre no mobile */
   .default-state {
     height: auto; /* Altura livre no mobile */
     min-height: 0;
   }
 
-  /* Permitir que o histórico se expanda livremente no mobile */
+  /* Permite que o histórico se expanda livremente no mobile */
   .history-section,
   .general-history-section {
     max-height: none; /* Remove limitação de altura */

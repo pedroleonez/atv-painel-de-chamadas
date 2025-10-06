@@ -55,7 +55,7 @@ export class VideoStateService {
   // Modifique aqui para mudar o vídeo/playlist em toda a aplicação
   private readonly videoConfig: VideoConfig = {
     videoId: 'WdxYgjjPSjg', // 👈 ID do vídeo único
-    // playlistId: 'PLQHfcgRZGC8A6YP-qRF1V6q_4k7V7N5D8', // 👈 ID da playlist (descomente para usar)
+    // playlistId: 'PL590L5WQmH8e3rwpbQWcDegcbBbudSXSP', // 👈 ID da playlist (descomente para usar)
     // videoIds: ['dQw4w9WgXcQ', 'oHg5SJYRHA0', 'fJ9rUzIMcZQ'], // 👈 Lista de vídeos (descomente para usar)
   };
 

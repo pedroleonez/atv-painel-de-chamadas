@@ -102,12 +102,10 @@
   pointer-events: auto;
 }
 
-/* Garantir que o highlight mantenha a mesma altura em ambos os estados */
 .highlight-section.calling-state {
   height: calc(100vh - 45px - 40px); /* Mesma altura do estado padrão */
 }
 
-/* No mobile, garantir altura consistente */
 @media (max-width: 768px) {
   .highlight-section.calling-state {
     height: 250px; /* Altura FIXA igual ao estado padrão */
